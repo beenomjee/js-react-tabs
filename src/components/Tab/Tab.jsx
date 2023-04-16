@@ -34,7 +34,6 @@ const Tab = () => {
                 x: childRect.left - containerRect.left + buttonContainerEl.current.scrollLeft,
                 y: childRect.top - containerRect.top
             };
-            console.log(childPosition);
             buttonContainerEl.current.style.setProperty('--l', `${childPosition.x}px`);
         } else {
             button.classList.remove(styles.active);

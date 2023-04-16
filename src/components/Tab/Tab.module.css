@@ -1,0 +1,56 @@
+.container {
+  border: 1px solid #18293a;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 600px;
+  max-width: 95vw;
+}
+
+.container > .top {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #18293a;
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.container > .top::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--l);
+  height: 0.3rem;
+  width: var(--w);
+  background-color: #80b4e0;
+  transition: left 0.2s, width 0.2s;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container > .top::-webkit-scrollbar {
+  display: none;
+}
+.container > .top {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.container > .top > button {
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #efefef;
+}
+.container > .top > button.active {
+  color: #80b4e0;
+}
+
+.container > .bottom {
+  padding: 1rem;
+}
+
+/* children tabs */
+.tabText {
+  color: #fff;
+}
